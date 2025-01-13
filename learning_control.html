@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Iterative Learning Control</title>
+		<title>Learning Control</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,11 +16,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Iterative Learning Control</a>
+				<a href="index.html" class="title">Learning Control</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="generic.html" class="active">Learning Control</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -47,7 +47,7 @@
                                     <li>Mostly works in a <b>feedforward</b> fashion being able to preserve the <b>elasticty</b> of the robot.</li>
                                     <li>Can exploit <b>model-based initial guess or terms in the controller itself</b> to speed up the learning process.</li>
                                     <li>Compensate for the <b>underactuation</b> of the robot.</li>
-                                    <li>Use <b>real data</b> for the training process implementing a <b>learning-while-doing</b> paradigm.</li>
+                                    <li>Use <b>real data</b> for the learning process implementing a <b>learning-while-doing</b> paradigm.</li>
                                     <li> <b>Thoeretical guarantee</b> for the convergence of the tracking error via <b>sufficcient conditions</b>.</li>
                                 </ul>
                             </p>
@@ -81,6 +81,31 @@
                             </div>
                         </div> -->
 
+                        <h2 class="major">Combining ILC with Reinforcment Learning</h2>
+
+                        <!-- <div style="text-align: center; margin: 0px 0;">
+                            <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 50%; display: inline-block; border-radius: 20px; box-sizing: border-box;">
+                                <img src="images/img/diagram_block.pdf" alt="" style="width: 70%; height: auto; display: block; margin: 0 auto;" />
+                                <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">ILC with RL scheme</p>
+                            </div>
+                        </div> -->
+                        <div style="text-align: center; margin: 0px 0;">
+                            <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 80%; height: auto; display: inline-block; border-radius: 20px; box-sizing: border-box;">
+                                <object data="images/img/diagram_block.pdf" type="application/pdf" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+                                    <p>Your browser does not support PDFs. Please download the PDF to view it: <a href="images/img/diagram_block.pdf">Download PDF</a>.</p>
+                                </object>
+                                <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">ILC with RL scheme</p>
+                            </div>
+                        </div>
+                        
+                        <p>This combined framework tries to combine the best features of both the controllers:
+                            <ul>
+                                <li><b>Feedforward and feedback</b> actions for preserving the <b>elasticty</b> and incresing the <b>robustness</b> of the controller.</li>
+                                <li>Sampling <b>quality data</b> for the traning.</li>
+                                <li>Use <b>real data</b> for the testing process implementing a <b>learning-while-doing</b> paradigm.</li>
+                                <li><b>Thoeretical guarantee</b> for the convergence of the tracking error via <b>sufficcient conditions</b>.</li>
+                            </ul>
+                        </p>
 					</section>
 
 			</div>
