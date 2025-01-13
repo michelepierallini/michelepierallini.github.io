@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Optimal Control</title>
+		<title>Fishing For Data</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,11 +16,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Optimal Control</a>
+				<a href="index.html" class="title">Fishing For Data</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Optimal Control</a></li>
+						<li><a href="generic.html" class="active">Fishing For Data</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -31,26 +31,27 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Optimal Control</h1>
+							<h1 class="major">Fishing For Data</h1>
 
                             <div style="text-align: center; margin: 0px 0;">
-                                <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 75%; display: inline-block; border-radius: 20px; box-sizing: border-box;">
-                                    <img src="images/img/optimal_control.jpg" alt="" style="width: 100%; height: auto; display: block; margin: 0 auto;" />
+                                <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 50%; display: inline-block; border-radius: 20px; box-sizing: border-box;">
+                                    <img src="images/img/fishing.png" alt="" style="width: 100%; height: auto; display: block; margin: 0 auto;" />
                                 </div>
                             </div>
-							<!-- <span class="image fit"><img src="images/img/optimal_control.jpg" alt="" /></span> -->
-							<p>To generate <b>explosive and energy-efficient motions</b> of robots, we implemented a <b>Differential Dynamic Programming</b>(DDP) routine. <br />
-                                DDP works in a model-based paradigm and computes <b>local optimal policy</b> composed a <b>feedback and a feedforward </b>term. <br /> 
-                                Thus, it is able to exploit the <b>elasitity of the robot's body</b> while ensuring high performances.
-                            </p>
-                            <p>We build up from the <a href="https://github.com/loco-3d/crocoddyl"><i>Crocoddyl library</i></a> with the following contributions:  <br />
+							<p>we address the problem of <b>precise motion planning and control</b> of flexible-link robots for <b>throwing</b>  small objects. Thanks to lightweight materials and elastic bodies, flexible robots can perform fast motions with few actuators. <br />
+                                However, they need a planning and control strategy capable of exploiting the robot's elasticity, negotiating with the system's underactuation, and compensating for the model's uncertainties.
+                                
+                                To solve this challenging task, we: 
                                 <ul>
-                                    <li>Integration of the <b>Soft Dynamics</b> modeling Serial Elastic and Variable Stiffness Actuators (SEA and VSA).</li>
-                                    <li>Use of <b>Analitical Derivatives</b>.</li>
-                                    <li>Validation on <b>floating-based and fixed-based</b>robots.</li>
-                                </ul>
+                                    <li><a href="soft_robot.html"><b>Compare multiple discrete models</b></a> for continuum robots' dynamics and, after selecting a lumped-parameters one, we experimentally identify its parameters.</li>
+                                    <li>Plan the robot motion via a <a href="optimal_control.html"><b>Differential-Dynamic-Programming</b></a>-based strategy tailored for flexible-link robots.</li>
+                                    <li>Employ an <a href="learning_control.html"><b>Iterative Learning Control</b></a> approach to close the reality-gap.</li>
+                                </ul>                         
+                                We applied the aforementioned approach to realize a throwing motion with a fishing rod for <b>environmental monitoring</b>.
+                                                                
                             </p>
-                        <p> We publish the following paper <a href="https://ieeexplore.ieee.org/abstract/document/10183652"><i>Optimal Control for Soft Articualted Robot</i></a></p>
+                            
+                        <!-- <p> We publish the following paper <a href="https://ieeexplore.ieee.org/abstract/document/10183652"><i>Optimal Control for Soft Articualted Robot</i></a></p> -->
 						
                         <!-- </div>
                             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
