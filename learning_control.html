@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Iterative Learning Control</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Iterative Learning Control</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Generic</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Iterative Learning Control</h1>
+
+                            <div style="text-align: center; margin: 0px 0;">
+                                <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 50%; display: inline-block; border-radius: 20px; box-sizing: border-box;">
+                                    <img src="images/img/control_iter.png" alt="" style="width: 70%; height: auto; display: block; margin: 0 auto;" />
+                                    <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">A Classic Iterative Control scheme</p>
+                                </div>
+                            </div>
+							<p>To compensate for the <b>reality gap</b>, we implemented different <b>Iterative Learning Control</b>(ILC) algorithm. <br />
+                                Repetion after repetion of a <i>fixed</i> trajectory, the iterative controller update its action until a minimazion of the tracking error is achieved.  <b></b>
+                            </p>
+                            <p>ILC has serval properties worth mentioning:
+                                <ul>
+                                    <li>Mostly works in a <b>feedforward</b> fashion being able to preserve the <b>elasticty</b> of the robot.</li>
+                                    <li>Can exploit <b>model-based initial guess or terms in the controller itself</b> to speed up the learning process.</li>
+                                    <li>Compensate for the <b>underactuation</b> of the robot.</li>
+                                    <li>Use <b>real data</b> for the training process implementing a <b>learning-while-doing</b> paradigm.</li>
+                                    <li> <b>Thoeretical guarantee</b> for the convergence of the tracking error via <b>sufficcient conditions</b>.</li>
+                                </ul>
+                            </p>
+                                
+                        <p> We publish the following papers
+                            <ul>
+                                <li> <a href="https://ieeexplore.ieee.org/abstract/document/10024171"><i>Iterative Learning Control for Compliant Underactuated Robots</i></a>.</li>
+                                <li> <a href="https://ieeexplore.ieee.org/abstract/document/10225256"><i>A Provably Stable Iterative Learning Control for continuum Soft Robots</i></a>.</li>
+                                <li> <a href="https://ieeexplore.ieee.org/abstract/document/9592831"><i>A Robust Iterative Learning Control for Continuous-time Nonlinear Systems with Disturbances</i></a>.</li>
+                                <li> <a href="https://ieeexplore.ieee.org/abstract/document/9691904"><i>Swing-up of Underactuated Compliant arms via Iterative Learning Control</i></a>.</li>
+                                <li> <a href="https://ieeexplore.ieee.org/abstract/document/9341215"><i>Trajectory Tracking of a One-Link Flexible arm via Iterative Learning Control</i></a>.</li>
+                            </ul>
+                            
+						
+                        <!-- </div>
+                            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+
+                            <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 18%; border-radius: 10px; box-sizing: border-box; text-align: center;">
+                                <img src="videos/bernoulli.gif" alt="GIF 1" style="width: 100%; height: auto;" />
+                                <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">Softleg Jumping</p>
+                            </div>
+                        
+                            <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 18%; border-radius: 10px; box-sizing: border-box; text-align: center;">
+                                <img src="videos/cosserat.gif" alt="GIF 2" style="width: 100%; height: auto;" />
+                                <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">Otto JUmping</p>
+                            </div>
+                        
+                            <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 18%; border-radius: 10px; box-sizing: border-box; text-align: center;">
+                                <img src="videos/pcc.gif" alt="GIF 3" style="width: 100%; height: auto;" />
+                                <p style="margin-top: 10px; font-size: 18px; font-style: italic; color: #555;">Otto Walking</p>
+                            </div>
+                        </div> -->
+
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
