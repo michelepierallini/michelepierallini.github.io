@@ -242,8 +242,8 @@
 								}
 					
 								.connector {
-									width: 2.5px;
-									height: 20px;
+									width: 3.0px;
+									height: 10px;
 									background-color: #000;
 								}
 					
@@ -290,16 +290,28 @@
 							/* padding: 10px 20px; */
 							border-radius: 5px;
 							text-decoration: none;
+							color: inherit;
+							background-color: none;
+							border: none;
 						}
 						.actions .button:hover {
 							background-color: #ff9f00; /* Slightly darker gold on hover */
 						}				
+						/* Responsive Design */
+						@media screen and (max-width: 768px) {
+							.features {
+								font-size: 1.2rem; /* Smaller font for mobile */
+								max-height: auto;
+							}
+							.features h3 {
+								font-size: 1.5rem;
+							}
+						}
 					</style>
-
+					<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 					<div class="inner">
 						<h2>Research</h2>
-
 						<!-- <p style="font-size: 1.5rem;">
 							I <i>strongly</i> believe that there are <strong><span style="color: #f9d675;">some things worth learning and other things have been known for years</span></strong>:
 							<ul style="font-size: 1.5rem;"></ul>
@@ -362,12 +374,7 @@
 							</section>
 						</div>
 						<p></p>
-						<!-- <ul class="actions">
-							<li><a href="https://scholar.google.com/citations?user=Iz1RFpIAAAAJ&hl=it" class="button">MY PUBBLICATIONS</a></li>
-							<li><a href="https://unipiit-my.sharepoint.com/:b:/g/personal/m_pierallini1_studenti_unipi_it/EYDNF8SmWNBBmUI6iRLcSaAB-qzDShZNhD11akjw0MqVUw?e=begoP4" class="button">MY PH.D. THESIS</a></li>
-							<li><a href="https://github.com/michelepierallini" class="button">MY GitHub</a></li>
-						</ul> -->
-						<ul class="actions" style="list-style: none; padding: 0;">
+						<ul class="actions" style="list-style: none; padding: 0; margin-top: 20px;">
 							<li>
 								<a href="https://scholar.google.com/citations?user=Iz1RFpIAAAAJ&hl=it" class="button" style="display: flex; align-items: center; gap: 8px; padding: 10px; text-decoration: none; border: 1px solid #ccc; border-radius: 5px;">
 									<i class="fas fa-book" style="font-size: 16px;"></i> MY PUBLICATIONS
@@ -384,7 +391,7 @@
 								</a>
 							</li>
 						</ul>
-						<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+						<p></p>
 					</div>
 				</section>
 			

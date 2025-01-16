@@ -31,10 +31,11 @@
                 <!-- Main -->
                 <section id="main" class="wrapper">
                     <div class="inner">
+                        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
                         <h1 class="major">Modeling Soft Robots</h1>
                         <h2 class="major">Comparing Different Models</h2>
 
-                        
                         <p>There is no <b>golden rule for modeling soft robots</b> and often the solution relies on <i>data availability, physical propertiese, and the computation time at disposal</i>. <br />
                             When describing a soft robots, we always balance <b>accuracy and computational cost</b>. 
                             Nevertheless, having a control-oriented and accurate model <b>increases performances of the planning and control phases</b>.
@@ -74,22 +75,10 @@
                             </div>
                         </div>
                         <p> These videos displays the different behaviors of a fishing rod robot when using different models and subjected to the same input torque \( u(t) = \cos(4 \pi t) \). </p>
-                        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-                        <!-- <h2 class="major">Hard Competences</h2>
-                        <p>The project and its implementation rely on a strong foundation in coding, including:</p>
-                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-                            <div title="Python" style="font-size: 50px; text-align: center;">Python</div>
-                            <div title="C++" style="font-size: 50px; text-align: center;">C++</div>
-                        </div> -->
-
+                        
                         <p></p>
                         
                         <h2 class="major">Relative Degrees May Change -> Be Aware!</h2>
-                        <!-- <div class="image-container">
-                            <img src="images/img/control.jpg" alt="" style="width: 40%; height: auto; display: block; margin: 0 auto;" />
-                        </div> -->
                         <div style="text-align: center; margin: 20px 0;">
                             <div class="image-container" style="background-color: #d3d3d3; padding: 10px; width: 50%; display: inline-block; border-radius: 20px; box-sizing: border-box;">
                                 <img src="images/img/control.jpg" alt="" style="width: 100%; height: auto; display: block; margin: 0 auto;" />
@@ -97,7 +86,6 @@
                         </div>
                                                                       
                         <p><br />Due to <b>underactuation</b>, the <b>relative degree of complaint underactuated robots may change</b> leading to <b>singularities</b> in model-based control.</p>
-                        <!-- <br /> Learning-based controllers avoid this singular configurations at the cost of decreasing the robot's performance. </p> -->
                         <p>We study <b>high-order controllability conditions</b> to ensure a <b>constant relative degree</b> and, interstling enough, this can be guaranteed by the <b>presence of the elastic elements.</b> </p>
                         <p>We investigate this property in the following paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10669918"><i>Dynamic Coupling for Underactuated Compliant
                             Arms With Not Well-Defined Relative Degree (IEEE TSMC:S)</i></a>
