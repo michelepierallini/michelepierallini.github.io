@@ -569,67 +569,114 @@
 									<p></p>
 							<style>
 								.timeline {
-									display: flex;
-									flex-direction: column;
-									align-items: center;
-									gap: 30px; 
-								}
-					
-								.dot-container {
-									display: flex;
-									flex-direction: column;
-									align-items: center;
 									position: relative;
-									margin-top: 0px;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									gap: 32px;
+									padding: 8px 0 18px;
 								}
-					
+
+								.timeline:before {
+									content: '';
+									position: absolute;
+									left: 50%;
+									top: 0;
+									bottom: 0;
+									width: 4px;
+									transform: translateX(-50%);
+									background: rgba(249, 214, 117, 0.25);
+									border-radius: 999px;
+								}
+
+								.dot-container {
+									position: relative;
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									padding: 2px 0;
+								}
+
 								.dot {
-									width: 120px;
-									height: auto;
+									z-index: 1;
+									width: 92px;
+									height: 92px;
 									background-color: #6d0194f5;
-									/* color: #fff; */
 									color: #f9d675;
-									font-size: 35px;
-									border-radius: 60%;
+									font-size: 32px;
+									border-radius: 999px;
 									display: flex;
 									align-items: center;
 									justify-content: center;
-									font-weight: bold;
-									margin-top: 0px;
+									font-weight: 800;
+									letter-spacing: 0.5px;
+									border: 1px solid rgba(249, 214, 117, 0.25);
+									box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+									transition: transform 0.15s ease, box-shadow 0.15s ease;
 								}
-					
-									.connector {
-										width: 3.0px;
-										height: 5px;
-										background-color: rgba(255, 255, 255, 0.75);
-									}
 
-									.connector_dummy {
-										width: 3.0px;
-										height: 15px;
-										background-color: rgba(255, 255, 255, 0.75);
-									}
+								.connector,
+								.connector_dummy {
+									width: 4px;
+									background-color: rgba(249, 214, 117, 0.35);
+									border-radius: 999px;
+								}
 
-									.connector_after {
-									position: absolute;
-									font-size: 40px;
-										color: rgba(255, 255, 255, 0.85);
-									top: 82%;     /* Adjusts the arrow's vertical position */
-									left: 50%;     /* Centers the arrow horizontally */
-									transform: translateX(-50%); /* Centers horizontally */
-									content: "↓";  /* The arrow */
-									font-family: sans-serif; /* Use a sans-serif font */
+								.connector {
+									height: 18px;
+								}
+
+								.connector_dummy {
+									height: 26px;
+								}
+
+								/* Hide the basic arrow markers; the vertical line does the job. */
+								.connector_after {
+									display: none;
 								}
 
 								.label {
+									z-index: 1;
 									background-color: #75388bf5;
 									color: #fff;
-									padding: 10px;
-									border-radius: 5px;
-									/* margin-top: 0px; */
+									padding: 12px 14px;
+									border-radius: 10px;
 									text-align: center;
-									font-size: 25px;
-									min-width: 150px;
+									font-size: 22px;
+									line-height: 1.35;
+									max-width: 900px;
+									box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.18);
+									transition: transform 0.15s ease, box-shadow 0.15s ease;
+								}
+
+								.dot-container .label + .label {
+									margin-top: 10px;
+								}
+
+								.dot-container:hover .dot,
+								.dot-container:focus-within .dot {
+									transform: translateY(-2px);
+									box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.28);
+								}
+
+								.dot-container:hover .label,
+								.dot-container:focus-within .label {
+									transform: translateY(-2px);
+									box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.22);
+								}
+
+								@media screen and (max-width: 736px) {
+									.timeline {
+										gap: 26px;
+									}
+									.dot {
+										width: 78px;
+										height: 78px;
+										font-size: 26px;
+									}
+									.label {
+										font-size: 18px;
+									}
 								}
 							</style>
 					</div>

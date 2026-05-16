@@ -4422,3 +4422,48 @@ input, select, textarea {
 		}
 	}
 	/* ---- End .news-image rules ---- */
+
+	/* ---- Small UI polish (hover/focus) ---- */
+	.button,
+	input,
+	select,
+	textarea,
+	.news-image {
+		transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.button:hover {
+		transform: translateY(-1px);
+	}
+
+	.button:active {
+		transform: translateY(0);
+	}
+
+	.news-image:hover {
+		transform: scale(1.02);
+	}
+
+	a:focus-visible,
+	.button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		outline: 2px solid rgba(249, 214, 117, 0.75);
+		outline-offset: 2px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.button,
+		input,
+		select,
+		textarea,
+		.news-image {
+			transition: none;
+		}
+		.button:hover,
+		.news-image:hover {
+			transform: none;
+		}
+	}
+	/* ---- End small UI polish ---- */
