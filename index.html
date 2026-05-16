@@ -42,16 +42,16 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Michele Pierallini, Ph.D.</h1>
-							<div style="display: flex; align-items: center;">
-								<img src="images/img/MP.jpeg" alt="Michele Pierallini" style="width: 200px; height: auto; margin-right: 20px;" />
-								<p><span style="font-size: 1.5em;"><strong>Data Scientist Bosch</span>
-								<br />
-								</p>
-								<p><span style="font-size: 1.5em;"><strong>Ex. Postdoc Robotics</strong> <a href="https://www.centropiaggio.unipi.it/">@Center E. Piaggio</a></span>
-								<br />
-								<i>(he/him)</i>
-								</p>
-							</div>
+								<div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+									<img src="images/img/MP.jpeg" alt="Michele Pierallini" style="width: 200px; height: auto;" />
+									<div style="display: flex; flex-direction: column; gap: 6px;">
+										<p style="margin: 0;"><span style="font-size: 1.5em;"><strong>Data Scientist Bosch</strong></span></p>
+										<p style="margin: 0;">
+											<span style="font-size: 1.5em;"><strong>Ex. Postdoc Robotics</strong> <a href="https://www.centropiaggio.unipi.it/">@Center E. Piaggio</a></span><br />
+											<i>(he/him)</i>
+										</p>
+									</div>
+								</div>
 								<p style="margin-top: 20px; margin-bottom: 10px; color: #ffffff;">
 									<span style="font-size: 1.25em;">I work on <em><u>planning and control for soft robots</u></em></span>
 									<span style="font-size: 2.15em;">🎣🦿</span>
@@ -174,20 +174,48 @@
 				<!-- One -->
 				<section id="one" class="wrapper style3 fade-up">
 					<style>
-						.features {
+						/* Research cards only (scope to #one so we don't affect other pages). */
+						#one .features {
 							text-align: center;
 							margin: 0 auto;
 							/* max-width: 2000px;  */
 							/* max-height: 850px; */
 							font-size: 1.5rem; 
-							padding: 20px; 
-							background: var(--mp-card-bg); /* Semi-transparent dark background */
-							border-radius: 10px; /* Rounded corners */
+							padding: 0; 
+							background: transparent;
+							border-radius: 0;
 							color: #ffffff; /* White text for contrast */
-							box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+							box-shadow: none;
+							border: 0;
+						}
+
+						#one .features > section {
+							background: var(--mp-card-1, rgba(10, 23, 48, 0.94));
+							border-radius: 12px;
+							padding: 1.75rem 1.25rem 1.1rem;
+							border: 1px solid rgba(255, 255, 255, 0.12);
+							box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.28);
+						}
+						#one .features > section:nth-child(2) {
+							background: var(--mp-card-2, rgba(13, 29, 59, 0.94));
+						}
+						#one .features > section:nth-child(3) {
+							background: var(--mp-card-3, rgba(16, 36, 71, 0.93));
+						}
+						#one .features > section:nth-child(4) {
+							background: var(--mp-card-4, rgba(18, 42, 82, 0.92));
+						}
+
+						/* Put the icon above the title (override template absolute positioning). */
+						#one .features > section .icon {
+							position: relative;
+							left: auto;
+							top: auto;
+							margin: 0 auto 0.85rem;
+							display: block;
 						}
 				
-						.features h3 {
+						#one .features h3 {
 							font-size: 2.0rem; 
 							color: #f9d675; /* Gold for headers to match overall theme */
 						}

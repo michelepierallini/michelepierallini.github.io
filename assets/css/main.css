@@ -38,6 +38,11 @@ ol, ul {
 
 blockquote, q {
 	quotes: none;
+		/* Research cards (more contrast vs wrapper background). */
+		--mp-card-1: rgba(10, 23, 48, 0.94);
+		--mp-card-2: rgba(13, 29, 59, 0.94);
+		--mp-card-3: rgba(16, 36, 71, 0.93);
+		--mp-card-4: rgba(18, 42, 82, 0.92);
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -4476,6 +4481,11 @@ input, select, textarea {
 		--mp-surface-2: #0a1730;
 		--mp-surface-3: #0d1d3b;
 		--mp-surface-4: #102447;
+		/* Distinct but cohesive card surfaces (for the 4 Research tiles). */
+		--mp-card-1: rgba(7, 18, 37, 0.86);
+		--mp-card-2: rgba(10, 23, 48, 0.86);
+		--mp-card-3: rgba(13, 29, 59, 0.86);
+		--mp-card-4: rgba(16, 36, 71, 0.84);
 		--mp-accent: #f9d675;
 		--mp-accent-underline: rgba(249, 214, 117, 0.65);
 		--mp-card-bg: rgba(10, 23, 48, 0.78);
@@ -4485,6 +4495,8 @@ input, select, textarea {
 	}
 
 	body { background: var(--mp-bg) !important; }
+	/* Some pages use plain `.wrapper` (no style class); ensure it stays dark. */
+	.wrapper { background-color: var(--mp-surface-1) !important; }
 
 	.wrapper.alt { background-color: var(--mp-bg) !important; }
 
@@ -4499,6 +4511,12 @@ input, select, textarea {
 	.wrapper.style3 { background-color: var(--mp-surface-2) !important; }
 
 	.wrapper.style3-alt { background-color: var(--mp-surface-4) !important; }
+
+	/* Per-page subtle variations for the four research detail pages */
+	body.page-soft-robot #main.wrapper { background-color: var(--mp-surface-2) !important; }
+	body.page-optimal-control #main.wrapper { background-color: var(--mp-surface-3) !important; }
+	body.page-learning-control #main.wrapper { background-color: var(--mp-surface-4) !important; }
+	body.page-fishing-for-data #main.wrapper { background-color: var(--mp-surface-2) !important; }
 
 	#sidebar { background: var(--mp-surface-1) !important; }
 
