@@ -4467,3 +4467,72 @@ input, select, textarea {
 		}
 	}
 	/* ---- End small UI polish ---- */
+
+	/* ---- Palette override: deep navy + gold (site-wide) ---- */
+	:root {
+		/* Dark, high-contrast surfaces (subtle variations per section). */
+		--mp-bg: #050814;
+		--mp-surface-1: #071225;
+		--mp-surface-2: #0a1730;
+		--mp-surface-3: #0d1d3b;
+		--mp-surface-4: #102447;
+		--mp-accent: #f9d675;
+		--mp-accent-underline: rgba(249, 214, 117, 0.65);
+		--mp-card-bg: rgba(10, 23, 48, 0.78);
+		/* Opaque on purpose (so timeline line never shows through). */
+		--mp-chip-bg: #0a1730;
+		--mp-label-bg: #0d1d3b;
+	}
+
+	body { background: var(--mp-bg) !important; }
+
+	.wrapper.alt { background-color: var(--mp-bg) !important; }
+
+	.wrapper.style1 { background-color: var(--mp-surface-1) !important; }
+
+	.wrapper.style1-alt { background-color: var(--mp-surface-2) !important; }
+
+	.wrapper.style2 { background-color: var(--mp-surface-3) !important; }
+
+	.wrapper.style2-alt { background-color: var(--mp-surface-4) !important; }
+
+	.wrapper.style3 { background-color: var(--mp-surface-2) !important; }
+
+	.wrapper.style3-alt { background-color: var(--mp-surface-4) !important; }
+
+	#sidebar { background: var(--mp-surface-1) !important; }
+
+	#sidebar nav a:after {
+		background-image: none;
+		background-color: var(--mp-accent-underline);
+	}
+
+	#sidebar nav a.active:after {
+		background-color: var(--mp-accent);
+		opacity: 0.9;
+	}
+
+	#header { background-color: var(--mp-surface-2) !important; }
+
+	h1.major:after {
+		background-image: linear-gradient(to right, rgba(249, 214, 117, 0.95), rgba(249, 214, 117, 0.15));
+	}
+
+	a {
+		border-bottom-color: rgba(249, 214, 117, 0.3);
+	}
+
+	.icon.major {
+		color: var(--mp-bg);
+	}
+
+	.icon.major:before { color: rgba(249, 214, 117, 0.92) !important; }
+	.wrapper.style1 .icon.major:before,
+	.wrapper.style1-alt .icon.major:before,
+	.wrapper.style2 .icon.major:before,
+	.wrapper.style2-alt .icon.major:before,
+	.wrapper.style3 .icon.major:before,
+	.wrapper.style3-alt .icon.major:before {
+		color: rgba(249, 214, 117, 0.92) !important;
+	}
+	/* ---- End palette override ---- */
